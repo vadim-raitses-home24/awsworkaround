@@ -1,9 +1,22 @@
+import subprocess
+
+
 class Docker:
 
-    def getRepository(self):
+    def get_repository(self):
+        subprocess.run(["git", "pull"])
 
         pass
-    def buildDocker(self):
+    def build_docker(self):
         pass
-    def uploadDocker(self):
+    def upload_docker(self):
         pass
+
+
+    def main(self):
+        print("start")
+        self.get_repository()
+        pass
+
+if __name__ == "__main__":
+    Docker().main()
